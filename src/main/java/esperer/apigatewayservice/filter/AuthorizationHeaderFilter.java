@@ -21,6 +21,7 @@ public class AuthorizationHeaderFilter extends AbstractGatewayFilterFactory<Auth
     private Environment env;
 
     public AuthorizationHeaderFilter(Environment env) {
+        super(Config.class);
         this.env = env;
     }
 
@@ -73,6 +74,6 @@ public class AuthorizationHeaderFilter extends AbstractGatewayFilterFactory<Auth
     }
 
     public static class Config {
-
+        // put a configuration info
     }
 }
