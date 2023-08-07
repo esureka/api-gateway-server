@@ -41,6 +41,7 @@ spring:
           filters:
             - RemoveRequestHeader=Cookie
             - RewritePath=/user-service/(?<segment>.*), /&\{segment}
+            - AuthorizationHeaderFilter
 
         # catalog
         - id: catalog-service
@@ -81,3 +82,6 @@ spring:
             baseMessage: Spring Cloud Gateway Global Filter
             preLogger: true
             postLogger: true
+
+token:
+  secret: user_token
